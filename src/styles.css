@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    color: #fff;
+    background: url("./img/01.png") top center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
