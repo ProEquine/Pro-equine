@@ -1,82 +1,96 @@
-
 @font-face {
-    font-family: myFont;
-    src: url(../assets/Fonts/SANSATION-LIGHT.TTF);
-  }
+  font-family: myFont;
+  src: url(../assets/Fonts/SANSATION-LIGHT.TTF);
+}
 
-.main{
-    margin:70px auto ;
+.main {
+  margin: 70px auto;
 }
-img{
-    position: relative;
-    width: 35%;
-    margin:1.5rem auto ;
-    display:flex;
+
+img {
+  position: relative;
+  width: 35%;
+  margin: 1.5rem auto;
+  display: flex;
 }
+
 h4 {
-    margin-top: 0.7rem;
-    color: #606060;
-    font-family: "myFont", sans-serif;
-    width: 100%;
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 100;
-} 
+  margin-top: 0.7rem;
+  color: #606060;
+  font-family: "myFont", sans-serif;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
 h5 {
   position: relative;
   bottom: 28%;
   margin: auto;
   text-align: center;
-  margin-bottom:2rem 0;
+  margin-bottom: 2rem 0;
   color: #000000;
   font-family: "myFont", sans-serif;
   z-index: 1025;
-} 
-h5 a{
+}
+
+h5 a {
   text-decoration: none;
   color: #606060;
 }
+
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, .2));
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 2.5rem 0;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 10px;
+}
+
+.waviy span {
+  font-family: "myFont", sans-serif;
+  position: relative;
+  display: inline-block;
+  background: -webkit-linear-gradient(left, #84837e, #606060);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  animation: waviy 3s infinite;
+  animation-delay: calc(.1s * var(--i));
+
+}
+
+@keyframes waviy {
+
+  0%,
+  40%,
+  100% {
+    transform: translateY(0)
+  }
+
+  20% {
+    transform: translateY(-20px)
+  }
+}
+
+@media (max-width: 576px) {
+  .main {
+    margin: 20% auto;
+  }
+
+  img {
+    width: 50%;
+  }
+
   .waviy {
-    position: relative;
-    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 2.5rem 0;
-    width: 100%;
-    text-align:center;
-    letter-spacing: 10px;
+    font-size: 1.5rem;
   }
-  .waviy span {
-    font-family: "myFont", sans-serif;
-    position: relative;
-    display: inline-block;
-    background: -webkit-linear-gradient(left, #84837e, #606060);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-    text-transform: uppercase;
-    animation: waviy 3s infinite;
-    animation-delay: calc(.1s * var(--i));
-    
+
+  h4 {
+    font-size: 1rem;
   }
-  @keyframes waviy {
-    0%,40%,100% {
-      transform: translateY(0)
-    }
-    20% {
-      transform: translateY(-20px)
-    }
-  }
-  @media (max-width: 576px) {
-    .main{
-      margin: 20% auto;
-    }
-    img {
-      width: 50%;
-    }
-    .waviy {
-      font-size:1.5rem;
-    }
-    h4{
-      font-size: 1rem;
-    }
-  }
+}
